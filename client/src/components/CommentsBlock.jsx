@@ -52,7 +52,7 @@ const CommentsBlock = () => {
   // const [com, setCom] = React.useState();
   const [isLoading, setLoading] = React.useState(true);
    React.useEffect(() => {
-        axios.get('http://localhost:4444/allcomments').then(({data}) => {
+        axios.get('https://story-kyev.onrender.com/allcomments').then(({data}) => {
            setData(data);
           //  setCom(com);
           // console.log(items); 

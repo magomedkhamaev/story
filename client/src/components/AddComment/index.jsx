@@ -31,7 +31,7 @@ export const Index = () => {
           coment
         };
         setComent('')
-        const createComment = await axios.post('http://localhost:4444/comments', fields);
+        const createComment = await axios.post('https://story-kyev.onrender.com/comments', fields);
   
         //  const _id = data._id;
         //  navigate("/");
