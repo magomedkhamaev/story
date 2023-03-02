@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 //import Search from "./Search";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectIsAuth } from '../redux/slices/auth';
-import { Avatar, Skeleton } from "@mui/material";
+import { Avatar, Button, Skeleton } from "@mui/material";
 import Search from "./Search";
 
 const Header = () => { 
@@ -12,7 +12,6 @@ const Header = () => {
 	const isAuth = useSelector(selectIsAuth);
     const {data, status} = useSelector((state) => state.auth);
 	const isDataLoading = status === 'loading';
-
     const onClickLogout = () => { 
 		if(window.confirm('if you sure ')){
 		 dispatch(logout());
@@ -45,9 +44,9 @@ return <>
 			           <Link to={"/add-post"} className=""><img src="images/opt2.svg" alt="" className="nav__icon-publish"/></Link>
 			        </div>
 					{isDataLoading ? <Skeleton/> : <Link to={'/profile'}><Avatar sx={{ width: 48, height: 48, mr: 1.5}} src={data.avatarUrl}/></Link>}
-					 <div className="nav__button">
+					 <div >
 					 <Link to="/login">
-						<Button onClick={onClickLogout} className="nav__butto" type="button">
+						<Button variant="contained" onClick={onClickLogout}  type="button">
 						Exit	
 						</Button>
 						</Link>
@@ -55,16 +54,16 @@ return <>
 					 </>
 				) : (
 					<>
-					<div className="nav__button">
+					<div >
 					<Link to="/login">
-						<Button className="nav__butto" type="button">
+						<Button variant="contained"  type="button">
 						Sign in	
 						</Button>
 						</Link>
 				</div>
-				<div className="nav__button">
+				<div >
 					<Link to="/register">
-						<Button className="nav__butto" type="button">
+						<Button variant="contained" type="button">
 						Sign up
 						</Button>
 						</Link>

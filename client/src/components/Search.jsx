@@ -38,7 +38,7 @@ const Search =  () => {
 
     return <>
   
-    <TextField  variant="outlined" 
+    <TextField style={{marginRight: 4, marginLeft: 4}} variant="outlined" 
      value={value} 
     //  onChange={(e) => setKey(e.target.value)}  placeholder="Search pizzas..."
     onChange={onChangeInput}  placeholder="Search pizzas..."

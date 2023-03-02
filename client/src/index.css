@@ -391,10 +391,10 @@ body {
   
   h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   /*--------------------*/
-  /* .wrapper{
+  .wrapper{
     max-width: 1240px;
     margin: 0 auto;
-  } */
+  }
   .header {
   width: 100%;
   z-index: var(--z-fixed);
